@@ -7,7 +7,6 @@ const { validation_register, validation_login } = require("../validation")
 //REGISTER
 router.post("/register", async (req, res) => {
     //validate data befor register
-    const a = 5
     const { error } = validation_register(req.body)
     if (error) return res.send(error.details[0].message)
 
